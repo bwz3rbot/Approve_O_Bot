@@ -23,7 +23,7 @@ Make sure you have the correct version of NodeJS for your system. You can find t
 
 You'll have to create a new account for your bot before you move any further.\
 And you'll have to grant the account permissions on both of the subs you are having it work on.\
-reddit.com/prefs/apps
+(reddit.com/prefs/apps)
 
 <img src='https://i.imgur.com/yq8akJ7.png'>
 
