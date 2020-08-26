@@ -21,23 +21,33 @@ These instructions will get you a copy of the bot up and running on your local m
 
 Make sure you have the correct version of NodeJS for your system. You can find the download here(https://nodejs.org/en/download/)
 
+You'll have to create a new account for your bot before you move any further.\
+And you'll have to grant the account permissions on both of the subs you are having it work on.\
+reddit.com/prefs/apps
+
+<img src='https://i.imgur.com/yq8akJ7.png'>
 
 ## Installing
 
+Now that you've set up your bot account, granted it permissions on both subreddits, and created a script app, it's time to download the source code and paste in your environment variables.
 
-Download the .zip file containing the source code on this page. Unzip and open up your terminal. <em>cd</em> into the folder you just unzipped the bot to.
+Download the .zip file containing the source code on this page. Unzip it and save it to your computer somewhere. Now open up the pw.envEXAMPLE file.\
+Also have open reddit.com/prefs/apps as you'll need to copy/paste the items you'll find there. User agent is just a name that the server will identify your bot by. It can be whatever you want.
 
-First edit your pw.envEXAMPLE file:
+The <strong>MASTER_SUB</strong> will be the one you pin the post to. Have your users call the bot by its name /u/(whatever you named the account).
 
-You'll have to have an account made for the bot and go to prefs/apps and create a script app. You are required to give it a valid and complete redirect uri, but it can go to anywhere. Say https://www.google.com
+When they call the bot by its username it will receive a mention in its inbox and will respond.\
+<em>If</em> users are allowed to post in your sub, and <em>when</em> they call this bot from it -be it from the pinned post or otherwise- the bot will grant them contributor rights on your defined <strong>SECONDARY_SUB</strong>.\
+These names are <u>case sensitive!</u> So if your sub has a capital in it, and your pw.env file doesn't match, it will not work.
 
-USER_AGENT=''\
-CLIENT_ID=''\
-CLIENT_SECRET=''\
-REDDIT_USER=''\
-REDDIT_PASS=''\
-MASTER_SUB=''\
-SECONDARY_SUB=''
+
+    USER_AGENT=''
+    CLIENT_ID=''
+    CLIENT_SECRET=''
+    REDDIT_USER=''
+    REDDIT_PASS=''
+    MASTER_SUB=''
+    SECONDARY_SUB=''
 
 now remove the EXAMPLE from the end of the filename.
 
@@ -55,5 +65,6 @@ Give it a minute to finish installing the dependencies. . . Then:
 
 ## Usage <a name = "usage"></a>
 
-Just keep a terminal open with it running.
-As long as your internet is connected, it should continuously scan for mentions. If the bot is powered off and then restarted, it will rescan the 5 most recent items in the inbox and attempt to add them as contributors if they are not already.
+Just keep a terminal open with it running.\
+
+As long as your internet is connected, it should continuously scan for mentions. If the bot is powered off and then restarted, it will scan the 5 most recent items in the inbox and then attempt to add the users who posted them as contributors to the secondary sub.
