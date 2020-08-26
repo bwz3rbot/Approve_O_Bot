@@ -1,0 +1,21 @@
+{
+  "name": "approve_o_bot",
+  "version": "1.0.0",
+  "description": "approves reddit to a second sub when they summon it from a pinned post",
+  "main": "src/app.js",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "dateformat": "^3.0.3",
+    "dotenv": "^8.2.0",
+    "figlet": "^1.5.0",
+    "snoostorm": "^1.5.0",
+    "snoowrap": "^1.21.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/app.js"
+  },
+  "author": "jdev",
+  "license": "ISC"
+}
