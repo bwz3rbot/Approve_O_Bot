@@ -65,6 +65,6 @@ Give it a minute to finish installing the dependencies. . . Then:
 
 ## Usage <a name = "usage"></a>
 
-Just keep a terminal open with it running.\
+Just keep a terminal open with it running.
 
 As long as your internet is connected, it should continuously scan for mentions. If the bot is powered off and then restarted, it will scan the 5 most recent items in the inbox and then attempt to add the users who posted them as contributors to the secondary sub.
